@@ -1,4 +1,5 @@
 body {
+  text-align: center;
   background-color: black;
   color: white;
   font-family: Arial;
@@ -9,9 +10,7 @@ p {
 }
 
 button {
-  left: 50%;
-  right: 50%;
-  width: 100px;
+  width: 200px;
   padding: 10px;
   font-size: 24pt;
 }
