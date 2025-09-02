@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  font-color: white;
+}
+
+p {
+  font-size: 16pt;
+}
+
+button {
+  
+}
+
+main {
+  visible: false
+}
+
+results {
+  visible: false
+}
