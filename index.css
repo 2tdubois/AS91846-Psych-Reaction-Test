@@ -1,6 +1,7 @@
 body {
   background-color: black;
-  font-color: white;
+  color: white;
+  font-family: Arial;
 }
 
 p {
@@ -8,13 +9,17 @@ p {
 }
 
 button {
-  
+  left: 50%;
+  right: 50%;
+  width: 100px;
+  padding: 10px;
+  font-size: 24pt;
 }
 
-main {
-  visible: false
+#main {
+  display: none;
 }
 
-results {
-  visible: false
+#results {
+  display: none;
 }
