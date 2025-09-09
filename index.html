@@ -5,17 +5,28 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div id="title">
+    <div id="start" class="screen">
       <h1>AS91846 REACTION TEST</h1>
       <p>Experimenter Group: Tommy Dubois, Fletcher Rogers, Tamihana Paki</p>
+      <p>todo: add audio</p>
       <button id="startbutton">Begin</button>
     </div>
     
-    <div id="main">
+    <div id="interlude" class="screen">
+      <div id="interludetext">
+        <h2>Round 1 instructions:</h2>
+        <p>Click on the circles as they appear.</p>
+      </div>
+      <button id="interludebutton">Begin</button>
     </div>
 
-    <div id="results">
-      <p>Experiment completed, do not close this tab. Please exit the room and notify experimenters</p>
+    <div id="main" class="screen">
+    </div>
+
+    <div id="results" class="screen">
+      <p>Experiment completed, do not close this tab. Please exit the room and notify experimenters.</p>
+      <p id="round1results"></p>
+      <p id="round2results"></p>
     </div>
   </body>
   <script src="index.js"></script>
