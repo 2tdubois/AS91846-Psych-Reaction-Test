@@ -4,24 +4,24 @@ body {
   color: white;
   font-family: Arial;
 }
-﻿
+
 p {
   font-size: 16pt;
 }
-﻿
+
 button {
   width: 200px;
   padding: 10px;
   font-size: 24pt;
 }
-﻿
+
 #startbutton {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-﻿
+
 #interludebutton {
   display: none;
   position: absolute;
@@ -29,25 +29,25 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-﻿
+
 .target {
   border-radius: 100%;
   position: absolute;
   background-color: white;
 }
-﻿
+
 #interlude {
   display: none;
 }
-﻿
+
 #main {
   display: none;
 }
-﻿
+
 #results {
   display: none;
 }
-﻿
+
 .screen {
   padding-top: 50px;
 }
