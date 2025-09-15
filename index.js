@@ -5,7 +5,7 @@ function setDelay(ms) {
 const TARGET_COUNT = 8; // 8 tests, 8 targets spawn
 const SPAWN_BASELINE_MS = 5000; // min 5s
 const SPAWN_ADDITIONAL_MS = 5000; // 5 extra seconds, so 10s maximum
-const CIRCLE_SIZE = 400;
+const CIRCLE_SIZE = 300;
 const PADDING = 50;
 ﻿
 const viewportWidth = window.innerWidth;
