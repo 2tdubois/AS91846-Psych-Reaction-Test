@@ -66,7 +66,9 @@ async function main() {
         // show results
         document.getElementById("results").style.display = "block";
         document.getElementById("main").style.display = "none";
+        console.log("Raw results (ms):");
         console.log(results);
+        console.log("Raw delay between circles (ms):");
         console.log(delays);
         // get median
         
