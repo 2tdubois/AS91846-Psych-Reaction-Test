@@ -18,6 +18,7 @@ var delays = [[],[]];
 async function main() {
     if (round == 1) {   
         // play music
+        document.getElementById("rockaudio").play();
     }
     for (let index = 0; index < TARGET_COUNT; index++) {
 
@@ -63,6 +64,8 @@ async function main() {
         document.getElementById("interlude").style.display = "block";
         document.getElementById("interludebutton").style.display = "block";
     } else {
+        // stop music
+        document.getElementById("rockaudio").pause();
         // show results
         document.getElementById("results").style.display = "block";
         document.getElementById("main").style.display = "none";
@@ -92,6 +95,7 @@ async function main() {
 
 document.getElementById("startbutton").addEventListener("click", () => {
     document.getElementById("start").style.display = "none";
+    document.getElementById("testaudio").pause();
     document.getElementById("interlude").style.display = "block";
     setTimeout(() => {
         document.getElementById("interludebutton").style.display = "block";
