@@ -81,8 +81,8 @@ async function main() {
         // get median
         let median = 0;
         let midpoint = Math.floor(TARGET_COUNT/2);
-        let results0 = results[0]
-        let results1 = results[1]
+        let results0 = Array.from(results[0])
+        let results1 = Array.from(results[1]) // clone arrays, stop editing original array
         if (TARGET_COUNT % 2 == 1) {
             median = results0.sort(sortAsc)[midpoint-1];
         } else {
