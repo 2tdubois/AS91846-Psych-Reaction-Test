@@ -80,18 +80,20 @@ async function main() {
         // get median
         let median = 0;
         let midpoint = Math.floor(TARGET_COUNT/2);
+        let results0 = results[0]
+        let results1 = results[1]
         if (TARGET_COUNT % 2 == 1) {
-            median = results[0].sort(sortAsc)[midpoint-1];
+            median = results0.sort(sortAsc)[midpoint-1];
         } else {
-            median = (results[0].sort(sortAsc)[midpoint-1] + results[0].sort(sortAsc)[midpoint])/2;
+            median = (results0.sort(sortAsc)[midpoint-1] + results0.sort(sortAsc)[midpoint])/2;
         }
         document.getElementById("round1results").innerText = "Round 1: " + (median).toString() + "ms";
 
         median = 0;
         if (TARGET_COUNT % 2 == 1) {
-            median = results[1].sort(sortAsc)[midpoint-1];
+            median = results1.sort(sortAsc)[midpoint-1];
         } else {
-            median = (results[1].sort(sortAsc)[midpoint-1] + results[1].sort(sortAsc)[midpoint])/2;
+            median = (results1.sort(sortAsc)[midpoint-1] + results1.sort(sortAsc)[midpoint])/2;
         }
         document.getElementById("round2results").innerText = "Round 2: " + (median).toString() + "ms";
     }
