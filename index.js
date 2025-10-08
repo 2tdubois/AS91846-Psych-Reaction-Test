@@ -58,7 +58,7 @@ async function main() {
         // log result
         let endTime = new Date();
         results[round].push(endTime-startTime);
-        print(results)
+        console.log(results)
     }
     if (round == 0) {
         round += 1
