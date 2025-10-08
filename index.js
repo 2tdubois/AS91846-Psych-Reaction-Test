@@ -6,7 +6,7 @@ function sortAsc(a, b) {
   return a - b;
 }
 
-const TARGET_COUNT = 8; // 8 tests, 8 targets spawn
+const TARGET_COUNT = 4; // 8 tests, 8 targets spawn (temp 4, remove)
 const SPAWN_BASELINE_MS = 5000; // min 5s
 const SPAWN_ADDITIONAL_MS = 5000; // 5 extra seconds, so 10s maximum
 const CIRCLE_SIZE = 300;
@@ -58,6 +58,7 @@ async function main() {
         // log result
         let endTime = new Date();
         results[round].push(endTime-startTime);
+        print(results)
     }
     if (round == 0) {
         round += 1
