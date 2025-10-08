@@ -2,6 +2,10 @@ function setDelay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function sortAsc(a, b) {
+  return a - b;
+}
+
 const TARGET_COUNT = 8; // 8 tests, 8 targets spawn
 const SPAWN_BASELINE_MS = 5000; // min 5s
 const SPAWN_ADDITIONAL_MS = 5000; // 5 extra seconds, so 10s maximum
@@ -77,17 +81,17 @@ async function main() {
         let median = 0;
         let midpoint = Math.floor(TARGET_COUNT/2);
         if (TARGET_COUNT % 2 == 1) {
-            median = results[0].sort()[midpoint-1];
+            median = results[0].sort(sortAsc)[midpoint];
         } else {
-            median = (results[0].sort()[midpoint-1] + results[0].sort()[midpoint])/2;
+            median = (results[0].sort(sortAsc)[midpoint] + results[0].sort(sortAsc)[midpoint+1])/2;
         }
         document.getElementById("round1results").innerText = "Round 1: " + (median).toString() + "ms";
 
         median = 0;
         if (TARGET_COUNT % 2 == 1) {
-            median = results[1].sort()[midpoint-1];
+            median = results[1].sort(sortAsc)[midpoint];
         } else {
-            median = (results[1].sort()[midpoint-1] + results[1].sort()[midpoint])/2;
+            median = (results[1].sort(sortAsc)[midpoint] + results[1].sort(sortAsc)[midpoint+1])/2;
         }
         document.getElementById("round2results").innerText = "Round 2: " + (median).toString() + "ms";
     }
