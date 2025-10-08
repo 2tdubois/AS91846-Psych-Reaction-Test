@@ -77,17 +77,17 @@ async function main() {
         let median = 0;
         let midpoint = Math.floor(TARGET_COUNT/2);
         if (TARGET_COUNT % 2 == 1) {
-            median = results[0][midpoint];
+            median = results[0].sort()[midpoint-1];
         } else {
-            median = (results[0][midpoint] + results[0][midpoint+1])/2;
+            median = (results[0].sort()[midpoint-1] + results[0].sort()[midpoint])/2;
         }
         document.getElementById("round1results").innerText = "Round 1: " + (median).toString() + "ms";
 
         median = 0;
         if (TARGET_COUNT % 2 == 1) {
-            median = results[1][midpoint];
+            median = results[1].sort()[midpoint-1];
         } else {
-            median = (results[1][midpoint] + results[1][midpoint+1])/2;
+            median = (results[1].sort()[midpoint-1] + results[1].sort()[midpoint])/2;
         }
         document.getElementById("round2results").innerText = "Round 2: " + (median).toString() + "ms";
     }
