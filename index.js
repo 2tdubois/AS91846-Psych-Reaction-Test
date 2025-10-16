@@ -84,7 +84,7 @@ async function main() {
         let results0 = Array.from(results[0])
         let results1 = Array.from(results[1]) // clone arrays, stop editing original array
         if (TARGET_COUNT % 2 == 1) {
-            median = results0.sort(sortAsc)[midpoint-1];
+            median = results0.sort(sortAsc)[midpoint];
         } else {
             median = (results0.sort(sortAsc)[midpoint-1] + results0.sort(sortAsc)[midpoint])/2;
         }
@@ -92,7 +92,7 @@ async function main() {
 
         median = 0;
         if (TARGET_COUNT % 2 == 1) {
-            median = results1.sort(sortAsc)[midpoint-1];
+            median = results1.sort(sortAsc)[midpoint];
         } else {
             median = (results1.sort(sortAsc)[midpoint-1] + results1.sort(sortAsc)[midpoint])/2;
         }
